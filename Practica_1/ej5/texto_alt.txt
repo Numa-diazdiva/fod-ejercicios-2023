@@ -1,0 +1,15 @@
+3245 132.00  Xiaomi
+14 7  Esta_bueno_el_celular
+Redmi
+245 333.00  Samsung
+23 44  Tiene_android
+Galaxy 
+445 500.00  Apel
+12 50  Tiene_camara
+iPhone
+32 50.00  Nokia
+12 5  Nokia_mil_cien
+1100
+247 333.50  Samsung
+55 44  Tiene_android
+Galaxia 
