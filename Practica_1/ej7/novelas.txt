@@ -1,0 +1,10 @@
+123 12.5 CienciaFiccion
+OdiseaNelEspacio
+4 15 Terror
+Miedo
+5 80 Ensayo
+Maus
+7 2500 Ensayo
+ImaginariosUrbanos
+45 4555 Fichines
+nivelX
