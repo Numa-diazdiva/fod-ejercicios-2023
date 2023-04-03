@@ -150,6 +150,21 @@ procedure actualizarMaestroDetalle(var aM: arch_alumnos; var aD: arch_materias);
 		close(aM); close(aD);
 	end;
 
+procedure listarAlumnesCondicion(var aM: arch_alumnos);
+	var
+		a: alumno;
+	begin
+		writeln(); writeln('------------ ALUMNES QUE TIENEN MÁS DE 4 CURSADAS SIN FINAL APROBADO ----------');
+		reset(aM);
+		while(not eof(aM)) do begin
+			read(aM, a);
+			if ((a.cantCursadas - a.cantAprobadas) > 4) then
+				imprimirAlumno(a);
+		end;
+		close(aM);
+		writeln();
+	end;
+
 procedure imprimirOpciones();
 	begin
 		writeln();
@@ -158,6 +173,7 @@ procedure imprimirOpciones();
 		writeln('Ingrese 2 para crear y cargar un archivo de materias');
 		writeln('Ingrese 3 para actualizar el archivo de alumnos con las materias aprobadas');
 		writeln('Ingrese 4 para imprimir el archivo de alumnos');
+		writeln('Ingrese 5 para listar alumnos que tengan más de cuatro cursadas aprobadas sin final');
 		writeln('Para salir ingrese "s"');
 	end;
 
@@ -180,6 +196,7 @@ Begin
 			'2': cargarDetalle(archDetalle);
 			'3': actualizarMaestroDetalle(archAlumnos, archDetalle);
 			'4': imprimirArchivo(archAlumnos);
+			'5': listarAlumnesCondicion(archAlumnos);
 		end;
 		imprimirOpciones();
 		write('opción: '); readln(opcion);
